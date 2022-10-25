@@ -1,8 +1,9 @@
 void main() {
   int start = 1700, stop = 1951, step = 10;
-  int multiplos = 0;
+  int numDeMultiplos = 0;
   int contador = 0;
   String resultado = "";
+  int lineas = 10;
 
   if (start >= stop || start < 0 || step < 0) {
     print("Para los valores de las variables indicadas no es posible " +
@@ -10,9 +11,9 @@ void main() {
   } else {
     for (int i = stop; i > start; i--) {
       if (i % step == 0) {
-        multiplos++;
+        numDeMultiplos++;
         contador++;
-        if (contador == 10) {
+        if (contador == lineas) {
           resultado += "$i \n";
           contador = 0;
         } else {
@@ -22,6 +23,6 @@ void main() {
     }
     print("La cuenta atrás de $step en $step desde $stop hasta $start es : " +
         "\n$resultado");
-    print("\nTotal números mostrados: $multiplos");
+    print("\nTotal números mostrados: $numDeMultiplos");
   }
 }
