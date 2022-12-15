@@ -19,6 +19,8 @@ public class infoDeDB {
 	public static void main(String[] args) {
 		
 		String url = "jdbc:mysql://localhost:3306/baseDeDatos?allowPublicKeyRetrieval=true&useSSL=false";
+		//String urlSQLite = "jdbc:sqlite:/home/alan/eclipse-workspace/Dam/src/connectionDB/baseDeDatos.sqlite";
+		// Para SQLite
 		String user = "root", pass = "";
 		String sql = "SELECT * FROM personas";
 		System.out.println("Estableciendo conexión");
