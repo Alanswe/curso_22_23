@@ -1,0 +1,17 @@
+section{
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: yellow;
+}
+figure{
+    float: left;
+    margin: 0 1%;
+    width: 23%;
+    
+}
+figure img{
+    width: 100%;
+}
+.limpiar{
+
+}

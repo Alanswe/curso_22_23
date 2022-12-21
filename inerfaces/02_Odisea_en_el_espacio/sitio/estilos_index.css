@@ -1,0 +1,17 @@
+figure{
+    width: 50%;
+    margin-top: 400px;
+    position: relative;
+    background-color: aqua;
+}
+figure img#luna{
+    width: 100%;
+    position: absolute;
+    top: o;left: 0;
+}
+figure img#astronauta{
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /*Con esto movemos hacia la izquierda*/
+}

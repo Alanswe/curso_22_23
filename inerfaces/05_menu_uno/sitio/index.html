@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Galeria</title>
+</head>
+<body>
+    <img id="boton" src="img/menu-responsive.png">
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Categoría</a></li>
+            <li><a href="#">Sobre el autor</a></li>
+            <li><a href="#">Todas las obras</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+    </nav>
+    <section>
+        <figure><img src="img/wyeth-canoa.jpg" alt=""></figure>
+        <figure><img src="img/wyeth-isla-del-tesoro.jpg" alt=""></figure>
+        <figure><img src="img/wyeth-rey-arturo.jpg" alt=""></figure>
+        <figure><img src="img/wyeth-storybook.jpg" alt=""></figure>
+        <figure><img src="img/wyeths-gigante.jpg" alt=""></figure>
+
+    </section>
+    <div class="limpiar"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae rem nisi doloribus consectetur eligendi aut ullam illo ex reprehenderit quibusdam, doloremque blanditiis aliquid? Quas sunt quo fugit id consectetur nisi!</p>
+    
+    <script>
+        document.getElementById("boton").onclick = function(){
+            document.getElementById("menu").classList.toggle("abierto")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+body{
+    background-color: #faf5f2;
+}
+hgroup{
+    width: 215px;
+    margin: 0 auto;
+}
+hgroup img {
+    width: 100%;
+}
+hgroup h1 {
+    /*font-family: 'Kenia', cursive;*/
+    font-family: 'Open Sans', sans-serif;
+}
