@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es_ES">
+        <meta charset="utf-8">
+        <title>Galería fotográfica</title>
+        <link href="reset.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <nav id="menu">
+                <ul>
+                    <li><img src="img/paisaje-montana.jpg" alt="Miniatura de un paisaje de montaña"></li>
+                    <li><img src="img/paisaje-desierto.jpg"  alt="Miniatura de un paisaje de desierto"></li>
+                    <li><img src="img/paisaje-ciudad.jpg" alt="Miniatura de un paisaje de ciudad"></li>
+                    <li><img src="img/paisaje-mar.jpg" alt="Miniatura de un paisaje del mar"></li>
+                </ul>
+            </nav>
+        </section>
+<script>
+
+    const imgenes = document.getElementsByTagName('img');
+    for (const imagen of imgenes) {
+        imagen.onclick = sacaImagenAPrimePlano;
+    }
+
+    function sacaImagenAPrimePlano(){
+        // creamos elemento section
+        let elemento = document.createElement('div');
+        document.body.appendChild(elemento);
+        // creamos un id
+        let atri = document.createAttribute('id');
+        atri.value = 'grande';
+        elemento.setAttributeNode(atri);
+    }
+
+
+</script>
+
+</body>
+</html>

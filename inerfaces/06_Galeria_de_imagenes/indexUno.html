@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es_ES">
+        <meta charset="utf-8">
+        <title>Galería fotográfica</title>
+        <link href="reset.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <figure id="galeria">
+                <img  src="img/paisaje-montana-grande.jpg"  alt="">
+                <figcaption>Paisaje de montaña</ficaption>
+            </figure>
+            <nav id="menu">
+                <ul>
+                    <li><img class="activa" src="img/paisaje-montana.jpg" alt="Miniatura de un paisaje de montaña"></li>
+                    <li><img src="img/paisaje-desierto.jpg"  alt="Miniatura de un paisaje de desierto"></li>
+                    <li><img src="img/paisaje-ciudad.jpg" alt="Miniatura de un paisaje de ciudad"></li>
+                    <li><img src="img/paisaje-mar.jpg" alt="Miniatura de un paisaje del mar"></li>
+                </ul>
+            </nav>
+        </section>
+<script>
+    const imagenes = document.querySelectorAll("img")
+    for (let imagen of imagenes) {
+        imagen.onclick = cambiaFotoAGrande;
+    }
+
+    function cambiaFotoAGrande() {
+            
+        // Con el replace
+        /*
+        const nombreFoto = this.src;
+        const nombreFotoGrandeDos = nombreFoto.replace('.jpg', '-grande.jpg')
+        document.getElementById("galeria").firstElementChild.src = nombreFotoGrandeDos;
+        */
+        
+        // Con el slice explicito
+        /*
+        const nombreFoto = this.src;
+        var nombreFotoGrande = '-grande.jpg';
+        var nombreFotoSinJPG = nombreFoto.slice(0, -4)
+        var urlFinal = nombreFotoSinJPG + nombreFotoGrande
+        document.getElementById("galeria").firstElementChild.src = urlFinal;
+        */
+
+        //Con el slice sucio
+        document.getElementById('galeria').firstElementChild.src = this.src.slice(0, -4) + '-grande.jpg';
+        
+        //console.log(nombreFotoSinJPG + nombreFotoGrande);
+        
+        //----------------------------------------------------
+        // la cambia a clase activa
+        // primero borramos la clase activa
+        document.querySelector('.activa').classList.remove('activa')
+        // la añadimos en el nuevo seleccionado
+        this.classList.add('activa')
+    }
+
+</script>
+
+</body>
+</html>
