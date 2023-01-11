@@ -1,0 +1,11 @@
+1,2904,verdé,Superdry,Mangá Larga Unisex,XXL
+2,2083,rojo,Superdry,máñaga larga hombre,S/M
+3,1627,verde,ZaRa,Manga Córta Hombre,L/XL
+4,413,naranja,Hackét,manga larga mújer,S/M
+5,2977,malva,Banana Blue,manga ,corta mujer,XS
+6,1635,     ,Ralph Lauren,manga larga unisex,M/L
+7,2710,zafiro, verde,ZaRa,manga larga unisex,M/L
+8,1584,cian,Silbon,manga larga hombre,M/L
+9,hola,lavanda,Edmmond Studios,manga corta mujer,XL
+10,2832,ocre,Hacket,manga corta hombre,XXL
+11,1627,verde,ZaRa,Manga Córta Hombre,L/XL
