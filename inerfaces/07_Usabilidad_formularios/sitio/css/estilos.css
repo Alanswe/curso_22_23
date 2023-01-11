@@ -1,0 +1,144 @@
+
+
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('OpenSans-Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url('OpenSans-Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('OpenSans-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*Barra de progreso*/
+:root{
+  --ocre: #D69400;
+  --arena: #FFD68D;  
+}
+header nav ol{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+header nav ol li{
+  background-color: grey;
+  flex: 1 0 calc(100%/3);
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 24px 0;
+}
+header nav ol li a{
+  color: black;  
+  text-decoration: none;
+  font-family: 'open_sansbold';
+  color: #fff;
+}
+
+li.actual{
+  background-color: var(--ocre);
+  position: relative;
+}
+
+li.actual a{
+  color: var(--arena);
+}
+
+li.actual::after{
+  content: "►";
+  color: var(--ocre);
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+li.completo{
+  background-color: var(--arena);
+  position: relative;
+}
+
+li.completo a{
+  color: var(--ocre);
+}
+
+li.completo ::after{
+  content: "►";
+  color: var(--arena);
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+/*---------------------*/
+
+body{
+  font-family: 'open_sansregular';
+  color: grey;
+}
+h1{
+  width: 80%;
+  margin: 29px auto;
+  background-color: #eee;
+}
+p{
+  margin: 15px auto;
+  background-color: #eee;
+}
+h1,h2,h3,h4 {
+  font-family: 'open_sansbold';
+}
+main {
+  width: 90%;
+  margin: 29px auto;
+}
+label{
+  margin: 15px auto;
+  display: block;
+  color: var(--ocre);
+}
+fieldset label{
+  display: inline;
+}
+
+
+input, textarea{
+  background-color: #eee;
+  border-radius: 10px;
+  width: calc(100%-20px);
+  padding: 10px;
+}
+
+input:focus, textarea:focus{
+  background-color: var(--arena);
+  outline: 0;
+}
+
+input[type=radio]{
+  appearance: none;
+  border: 2px solid var(--arena);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+input[type=radio]:checked{
+  background-color: var(--ocre);
+  border: 2px solid var(--arena);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
