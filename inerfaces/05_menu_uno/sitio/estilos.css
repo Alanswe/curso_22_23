@@ -17,7 +17,6 @@ nav {
 .abierto{
     display: block !important;
 }
-
 nav li a{
 font-size: 40px;
     color: black;
@@ -26,8 +25,6 @@ font-size: 40px;
 nav li a:hover{
     color: #555;
 }
-
-
 section{
     max-width: 900px;
     margin: 60px auto;
