@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páctica 10</title>
+    <style>
+        #boton::after{
+            content: "Abierto";
+        }
+        .desplegado::after{
+            content: "Cerrado" !important;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           //$("body").html("<p>hola jQuery</p>") //sustituye el contenido
+           //$("#menu").css("background","cyan") // para cambiar solo un elemento
+           $("#menu").css({"background":"cyan",
+                            "border":"3px solid red",
+                            "display":"none"}) // para varios elementos
+            $("button").css("border","3px solid red");
+            let desplegado = false;
+            $("button").click(function(){
+                $(this).next().slideToggle(100,function(){$(this).prev().toggleClass("desplegado")});
+                /*
+                if (desplegado == false){
+                    $(this).next().slideDown(100, function(){$(this).prev().html("Cerrar")})
+                    desplegado = true;
+                }else{
+                    $(this).next().slideUp(100, function(){$(this).prev().html("Abrir")})
+                    desplegado = false;
+                }; 
+                */
+                //(duracion,momentos,llamada)
+            })
+            
+        }
+        );
+    </script>
+</head>
+<body>
+    <a href=""></a>
+    <nav>
+        <button id="boton"><!-- Abrir--></button> 
+        <ul id="menu"></ul>
+    </nav>
+    <script>
+        const peticion = new XMLHttpRequest();
+        peticion.open("GET", "code.json");
+        peticion.send();
+        peticion.responseType = "json";
+        peticion.onload = function() {
+            if (peticion.readyState == 4 && peticion.status == 200) {
+            const datos = peticion.response;
+            console.log(datos);
+
+            for (const elemt of datos) {
+                console.log(elemt);  
+                document.getElementById("menu").innerHTML += 
+                '<li><a href="'+elemt.url+'">'+elemt.label+"</a></li>";
+            }
+            } else {
+                console.log("Error"+ peticion.state);
+            }
+        }
+
+    </script>
+</body>
+</html>
